@@ -1,5 +1,19 @@
 == README
 
+TODO: 
+- rubocup
+- circleci
+- rspec
+- guard spec
+- user login 
+- admin login 
+- css fremework
+- rss
+- news by admin
+- document 
+-- rename rails app document
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
