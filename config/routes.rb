@@ -7,12 +7,11 @@ Rails.application.routes.draw do
 
   # admin
   devise_for :admins, 
-                # path: "admin", 
+                path: "admin", 
                 path_names: 
                   { 
                     sign_in: 'login', 
-                    sign_out: 'logout', 
-                    sign_up: 'cmon_let_me_in'
+                    sign_out: 'logout'
                   } ,
                 controllers: 
                   { 
