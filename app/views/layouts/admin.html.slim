@@ -4,8 +4,8 @@ html lang="ja"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     / link href="#{rss_feed_url(format: :rss)}" rel="alternate" title="" type="application/rss+xml"
 
-    = stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag "application", 'data-turbolinks-track' => true , :async => false
+    = stylesheet_link_tag "admin", media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag "admin", 'data-turbolinks-track' => true , :async => false
     = csrf_meta_tags
     = display_meta_tags(default_meta_tags)
     = analytics_init if GoogleAnalytics.valid_tracker?

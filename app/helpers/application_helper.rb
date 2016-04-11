@@ -4,7 +4,7 @@ module ApplicationHelper
       site: 'Sorepo' ,
       reverse: true,
       title: "Sorepo #{params[:page] << 'ページ' if params[:page]}",
-      description: 'それっぽいRails'  ,
+      description: 'それっぽいRails',
       keywords: 'Rails,Sample',
       canonical: request.original_url,
       separator:   "&mdash;".html_safe,
