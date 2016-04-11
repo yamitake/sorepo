@@ -58,6 +58,10 @@ gem 'dotenv'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rspec-rails'
+  gem "capybara"
+  gem 'guard-rspec', require: false
+  gem 'factory_girl_rails' #http://www.rubydoc.info/gems/factory_girl/file/GETTING_STARTED.md
   gem 'byebug'
 end
 
