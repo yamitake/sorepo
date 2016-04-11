@@ -14,6 +14,7 @@ TODO:
 - site_map
 - 他言語か
 - errorsページ
+- notification
 - document 
 -- rename rails app document
 

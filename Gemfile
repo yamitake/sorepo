@@ -79,3 +79,5 @@ group :development do
   gem 'bullet'
 end
 
+gem 'simplecov', :require => false, :group => :test
+
