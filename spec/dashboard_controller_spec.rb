@@ -5,7 +5,7 @@ RSpec.describe Admin::DashboardController, :type => :controller do
     let(:admin) { FactoryGirl.build(:admin) }
 
     before do
-      #login_admin admin
+      sign_in :admin, admin
     end
 
     it "responds successfully with an HTTP 200 status code" do

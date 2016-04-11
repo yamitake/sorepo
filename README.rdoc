@@ -10,6 +10,10 @@ TODO:
 - css fremework
 - rss
 - news by admin
+- rails_admin
+- site_map
+- 他言語か
+- errorsページ
 - document 
 -- rename rails app document
 

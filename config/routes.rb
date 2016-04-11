@@ -15,6 +15,7 @@ Rails.application.routes.draw do
                   }
   namespace :admin do
     root 'dashboard#index'
+    mount RailsAdmin::Engine => '/rails_admin', as: 'rails_admin'
   end
 
   # Example of regular route:
