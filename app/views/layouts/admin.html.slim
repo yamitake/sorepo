@@ -10,4 +10,5 @@ html lang="ja"
     = display_meta_tags(default_meta_tags)
     = analytics_init if GoogleAnalytics.valid_tracker?
   body
+    h1 admin layout
     = yield
