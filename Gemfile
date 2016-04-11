@@ -46,6 +46,11 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-instagram'
 
+gem 'google-analytics-rails'
+gem "sitemap_generator"
+# meta tags
+gem 'newrelic_rpm'
+
 gem 'dotenv'
 
 # Use Capistrano for deployment
