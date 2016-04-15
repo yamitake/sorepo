@@ -3,20 +3,18 @@
 TODO: 
 - rubocup
 - circleci
-- rspec
-- guard spec
-- user login 
-- admin login 
+- user login
 - css fremework
 - rss
 - news by admin
-- rails_admin
 - site_map
 - 他言語か
 - errorsページ
 - notification
 - document 
 -- rename rails app document
+-- aws
+-- loading
 
 
 This README would normally document whatever steps are necessary to get the

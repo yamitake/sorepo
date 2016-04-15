@@ -3,20 +3,33 @@ Rails.application.routes.draw do
 
   # admin
   devise_for :admins, 
-                path: "admin", 
+                path: 'admin', 
                 path_names: 
                   { 
                     sign_in: 'login', 
                     sign_out: 'logout'
-                  } ,
+                  },
                 controllers: 
                   { 
-                    sessions: "admin/sessions"
+                    sessions: 'admin/sessions'
                   }
   namespace :admin do
     root 'dashboard#index'
     mount RailsAdmin::Engine => '/rails_admin', as: 'rails_admin'
   end
+
+
+  #user
+  devise_for :users,
+              path: '/',
+              path_names:
+                {
+                  sign_in: 'login',
+                  sign_out: 'logout'
+                }
+
+
+  #public
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
