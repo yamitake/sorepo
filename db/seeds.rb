@@ -8,3 +8,8 @@
 
 password = 'sorepopass'
 Admin.find_or_create( email: 'admin@example.com', password: password , password_confirmation: password )
+
+password = 'userpass'
+Admin.find_or_create( email: 'user1@example.com', password: password , password_confirmation: password )
+Admin.find_or_create( email: 'user2@example.com', password: password , password_confirmation: password )
+Admin.find_or_create( email: 'user3@example.com', password: password , password_confirmation: password )
