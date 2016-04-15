@@ -46,6 +46,9 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-instagram'
 
+# static page
+gem 'high_voltage'
+
 gem 'google-analytics-rails'
 gem "sitemap_generator"
 # meta tags
