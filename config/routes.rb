@@ -21,7 +21,6 @@ Rails.application.routes.draw do
 
   #user
   devise_for :users,
-              path: '/',
               path_names:
                 {
                   sign_in: 'login',
