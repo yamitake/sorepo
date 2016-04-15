@@ -11,4 +11,6 @@ html lang="ja"
     = analytics_init if GoogleAnalytics.valid_tracker?
   body
     h1 admin layout
+    = render 'admin/shared/header'
     = yield
+    = render 'admin/shared/footer'

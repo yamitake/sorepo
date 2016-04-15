@@ -1,0 +1,30 @@
+@import "compass/css3";
+
+$loader-ring-size: 100px;
+$loader-ring-border-size: 4px;
+
+.loader-ring {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  margin: $loader-ring-size/-2 0 0 $loader-ring-size/-2;
+  width: $loader-ring-size;
+  height: $loader-ring-size;
+}
+
+.loader-ring-light {
+  width: $loader-ring-size;
+  height: $loader-ring-size;
+  @include border-radius($loader-ring-size);
+  @include box-shadow(0 $loader-ring-border-size 0 lighten(#0087bf, 10%) inset);
+  animation: rotate-360 1s linear infinite;
+}
+
+@keyframes rotate-360 {
+  from {
+    @include rotate(0);
+  }
+  to {
+    @include rotate(360deg);
+  }
+}
