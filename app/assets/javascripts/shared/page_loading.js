@@ -1,8 +1,11 @@
 $(function(){
   $(document).on('page:fetch', function(){
-    $("#page_loading").show('fast');
+    if(!$('.loader').length){
+      $('body').append('<div class="loader" style="display:none;"><div class="loader-ring-light" /></div>');
+    }
+    $(".loader").show('fast');
   });
   $(document).on('page:change', function(){
-    $('#page_loading').hide('fast');
+    $('.loader').hide('fast');
   });
 });

@@ -10,10 +10,6 @@ html lang="ja"
     = display_meta_tags(default_meta_tags)
     = analytics_init if GoogleAnalytics.valid_tracker?
   body
-    #page_loading
-      .loader-ring
-        .loader-ring-light
-  
     = render 'shared/header'
     = yield
     = link_to "aaaa" , root_path
