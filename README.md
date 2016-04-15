@@ -11,6 +11,7 @@ TODO:
 - 他言語か
 - errorsページ
 - notification
+-- notice.
 - document 
 -- rename rails app document
 -- aws

@@ -27,6 +27,7 @@ Rails.application.routes.draw do
                   sign_in: 'login',
                   sign_out: 'logout'
                 }
+  get 'home' => 'home#index'
 
 
   #public
