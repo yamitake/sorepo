@@ -79,5 +79,8 @@ group :development do
   gem 'bullet'
 end
 
-gem 'simplecov', :require => false, :group => :test
+group :test do
+  gem 'simplecov', :require => false
+  gem 'database_cleaner'
+end
 

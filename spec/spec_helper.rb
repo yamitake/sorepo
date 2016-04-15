@@ -24,7 +24,6 @@ SimpleCov.start 'rails'
 RSpec.configure do |config|
   config.include Devise::TestHelpers, type: :controller
   config.include Devise::TestHelpers, type: :view
-  config.include FactoryGirl::Syntax::Methods
   
   # config.use_transactional_fixtures = true
   # config.infer_base_class_for_anonymous_controllers = false
@@ -54,6 +53,21 @@ RSpec.configure do |config|
     # a real object. This is generally recommended, and will default to
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
+  end
+
+  config.before(:suite) do
+    DatabaseCleaner[:mongoid].strategy = :truncation
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before :each do
+    DatabaseCleaner[:mongoid].start
+    DatabaseCleaner.start
+  end
+
+  config.after :each do
+    DatabaseCleaner[:mongoid].clean
+    DatabaseCleaner.clean
   end
 
 # The settings below are suggested to provide a good initial experience
