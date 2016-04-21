@@ -3,7 +3,6 @@
 TODO: 
 - rubocup
 - circleci
-- user login
 - css fremework
 - rss
 - news by admin
@@ -14,8 +13,12 @@ TODO:
 -- notice.
 - document 
 -- rename rails app document
--- aws
--- loading
+- aws
+- social_login password profile 変更
+- breadcrumbs
+- newrelic
+
+
 
 
 This README would normally document whatever steps are necessary to get the
