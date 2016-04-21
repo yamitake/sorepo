@@ -51,11 +51,14 @@ gem 'omniauth-instagram'
 gem 'high_voltage'
 
 gem 'google-analytics-rails'
+# https://github.com/kjvarga/sitemap_generator
 gem "sitemap_generator"
-# meta tags
+# パフォーマンス監視 https://newrelic.com/
 gem 'newrelic_rpm'
-
+# Loads environment variables from `.env`. https://github.com/bkeepers/dotenv
 gem 'dotenv'
+# managing a breadcrumb navigation https://github.com/weppos/breadcrumbs_on_rails
+gem "breadcrumbs_on_rails"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

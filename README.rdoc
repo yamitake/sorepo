@@ -11,14 +11,9 @@ TODO:
 - errorsページ
 - notification
 -- notice.
-- document 
--- rename rails app document
 - aws
 - social_login password profile 変更
 - breadcrumbs
-- newrelic
-
-
 
 
 This README would normally document whatever steps are necessary to get the
@@ -49,3 +44,4 @@ Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
 http://www.freefavicon.com/freefavicons/objects/
+http://www.freefavicon.com/freefavicons/objects/iconinfo/simple-optical-effect-152-20732.html
