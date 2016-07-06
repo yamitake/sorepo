@@ -9,10 +9,11 @@ module ControllerMacros
   end
 
   def login_user
-    user =  FactoryGirl.create(:user)
-    allow(controller).to receive(:current_user).and_return(user)
-    @request.env["devise.mapping"] = Devise.mappings[:user]
-    sign_in user
+    before(:each) do
+      @request.env["devise.mapping"] = Devise.mappings[:user]
+      user =  FactoryGirl.create(:user)
+      sign_in user
+    end
   end
 end
 
