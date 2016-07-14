@@ -10,7 +10,7 @@ Rails.application.routes.draw do
                     sign_out: 'logout'
                   },
                 controllers: 
-                  { 
+                  {
                     sessions: 'admin/sessions'
                   }
   namespace :admin do
