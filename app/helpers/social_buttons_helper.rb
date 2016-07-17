@@ -1,3 +1,4 @@
+# ソーシャルボタンの出力
 module SocialButtonsHelper
   #
   # Pinterestボタン
@@ -58,7 +59,15 @@ module SocialButtonsHelper
   #
   # LINEボタン
   # https://media.line.me/howto/ja/
+  # http://line.me/R/msg/<CONTENT TYPE>/?<CONTENT KEY>
+  # line://msg/<CONTENT TYPE>/<CONTENT KEY>
   #
+  def line_button text = ''
+    line_href = "http://line.me/R/msg/?#{URI.escape(text)}"
+    link_to line_href do
+      "LINE Button"
+    end
+  end
 
   #
   # poketボタン
