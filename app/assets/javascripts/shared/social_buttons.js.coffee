@@ -1,5 +1,4 @@
 ready = ->
-  console.log("reayd!!");
   # Facebook
   loadFacebookSDK()
   bindFacebookEvents() unless window.fbEventsBound
@@ -28,7 +27,6 @@ bindFacebookEvents = ->
   @fbEventsBound = true
 
 saveFacebookRoot = ->
-  console.log("saveFacebookRoot");
   if $('#fb-root').length
     @fbRoot = $('#fb-root').detach()
 
@@ -40,7 +38,6 @@ restoreFacebookRoot = ->
       $('body').append @fbRoot
 
 loadFacebookSDK = ->
-  console.log("load_sdk");
   window.fbAsyncInit = initializeFacebookSDK
   $.getScript("//connect.facebook.net/ja_JP/sdk.js")
 
@@ -57,7 +54,6 @@ initializeFacebookSDK = ->
 twttr_events_bound = false
 
 bindTwitterEventHandlers = ->
-  console.log("bindTwittereventHandlers")
   $(document).on 'page:load', renderTweetButtons
   twttr_events_bound = true
   console.log("hello");
