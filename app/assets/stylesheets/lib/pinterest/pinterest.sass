@@ -1,0 +1,170 @@
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  color: #444
+
+.status-padding
+  top: 16px
+
+.input-search
+  background: #CDCECF
+  height: 36px
+  input
+    font-weight: 700
+    font-size: 1.4em
+    line-height: inherit
+    &::-webkit-input-placeholder
+      line-height: 22px
+
+.tab-nav.tabs
+  border: none
+.bar-no-border
+  border: none
+  background-image: none !important
+  // background-size: 100% 0px
+
+
+/* LANDING */
+.has-bg
+  background: url('../img/landing_bg.png') center center transparent
+  background-size: cover
+
+.button.button-block.button-social
+  margin: 0
+
+.divider-or .divider-or-text
+  position: relative
+  top: 9px
+  padding: 10px
+
+/* POSTS */
+.posts
+  align-items: flex-start
+  width: calc(100% - 8px)
+  margin: 0 auto
+.post
+  width: calc(50% - 12px)
+  margin: 6px
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22)
+.post-image
+  border-radius: 4px 4px 0 0
+.hashtag
+  font-weight: 700
+.post-author
+  overflow: hidden
+.no-padder-left
+  padding-left: 58px
+  img
+    left: 0!important
+
+/* Column layout - experimental */
+.columns-3
+  -webkit-column-count: 3
+  -webkit-column-gap: 3px
+  // width: 100%
+  max-width: 1100px
+
+.notification-header
+  padding: 5px 10px 5px
+  height: 54px
+.has-notification-header
+  top: 44px
+.notification-tabs
+  background-color: #CCCCCC
+  // padding: 3px
+  border-radius: 4px
+  font-weight: 700
+  height: 34px
+  .button
+    // border-radius: 4px
+    // padding: 5px
+    // line-height: inherit
+    // min-height: 36px
+    font-weight: 700
+    background-color: transparent
+    color: #aaa
+    &.active
+      background-color: #fff
+      color: #000
+.object-thumb
+  width: 48px
+  height: 48px
+  background-size: cover
+  border-radius: 4px!important
+  margin-right: 8px
+  &.rounded
+    border-radius: 999em
+
+.modal-small
+  top: 10%
+  bottom: 10%
+  left: 5%
+  right: 5%
+  min-height: inherit
+  width: inherit
+  border-radius: 8px
+  &.modal-smaller
+    top: 20%
+    bottom: 20%
+.modal-backdrop-bg
+  background-color: rgba(0,0,0,.7)
+  backdrop-filter: blur(10px)
+
+/* Pin Collections */
+.pins
+  height: 250px
+  overflow: hidden
+
+/* Carousel */
+.carousel
+  overflow: scroll
+  white-space: nowrap
+.carousel-item
+  display: inline-block
+
+/* Chat bubble */
+$darkColor: #28292A
+.chat-bubble
+  .bubble
+    position: relative
+    margin-bottom: 8px
+    padding: 0
+    .content
+      display: inline-block
+      background: $darkColor
+      border-radius: 4px
+      padding: 10px
+      font-size: 15px
+      color: white
+      white-space: normal
+      &.photo
+        padding: 0
+    .icon-tail
+      position: absolute
+      top: 0
+      left: -5px
+      width: 0
+      height: 0
+      border-top: 7px solid $darkColor
+      border-left: 7px solid transparent
+      border-top-left-radius: 3px
+
+  .me
+    .bubble
+      .icon-tail
+        left: inherit
+        top: inherit
+        bottom: 0
+        right: -5px
+        border-bottom: 7px solid $darkColor
+        border-right: 7px solid transparent
+        border-top: 7px solid transparent
+  .friend
+    .bubble .content
+      background: #fff
+      color: #444
+    .icon-tail
+      border-top: 7px solid #fff
+
+/* Utils */
+.icon-small:before
+  font-size: 24px!important
+

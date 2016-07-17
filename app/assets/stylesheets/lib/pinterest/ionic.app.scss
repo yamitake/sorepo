@@ -22,6 +22,6 @@ $stable:                          #EAEBEC !default;
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
-@import "lib/ionic/ionic";
-@import "lib/pinterest/helper.sass";
-@import "lib/pinterest/pinterest.sass";
+@import "www/lib/ionic/scss/ionic";
+@import "helper.sass";
+@import "pinterest.sass";

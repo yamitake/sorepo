@@ -10,7 +10,7 @@ html lang="ja"
     = display_meta_tags(default_meta_tags)
     = analytics_init if GoogleAnalytics.valid_tracker?
   body
+    = render 'layouts/fb_root'
     = render 'shared/header'
     = yield
-    = link_to "aaaa" , root_path
     = render 'shared/footer'
