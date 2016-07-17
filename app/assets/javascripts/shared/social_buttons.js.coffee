@@ -1,54 +1,55 @@
 ready = ->
-  # Hatena
-  loadHatenaSDK()
-
+  console.log("reayd!!");
   # Facebook
-  # loadFacebookSDK()
-  # bindFacebookEvents() unless fb_events_bound
+  loadFacebookSDK()
+  bindFacebookEvents() unless window.fbEventsBound
 
   # Twitter
   loadTwitterSDK()
   bindTwitterEventHandlers() unless twttr_events_bound
 
-# For turbolinks
+  # Pocket
+  loadPocketSDK()
+
+
 $(document).ready(ready)
 $(document).on('page:load', ready)
 
 # ----------------------------------------- #
 # Facebook
 # ----------------------------------------- #
-# fb_root = null
-# fb_events_bound = false
+bindFacebookEvents = ->
+  $(document)
+    .on('page:fetch', saveFacebookRoot)
+    .on('page:change', restoreFacebookRoot)
+    .on('page:load', ->
+      FB?.XFBML.parse()
+    )
+  @fbEventsBound = true
 
-# bindFacebookEvents = ->
-#   $(document)
-#   .on('page:fetch', saveFacebookRoot)
-#   .on('page:change', restoreFacebookRoot)
-#   .on('page:load', ->
-#     FB?.XFBML.parse()
-#   )
-#   fb_events_bound = true
+saveFacebookRoot = ->
+  console.log("saveFacebookRoot");
+  if $('#fb-root').length
+    @fbRoot = $('#fb-root').detach()
 
-# saveFacebookRoot = ->
-#   fb_root = $('#fb-root').detach()
+restoreFacebookRoot = ->
+  if @fbRoot?
+    if $('#fb-root').length
+      $('#fb-root').replaceWith @fbRoot
+    else
+      $('body').append @fbRoot
 
-# restoreFacebookRoot = ->
-#   if $('#fb-root').length > 0
-#     $('#fb-root').replaceWith fb_root
-#   else
-#     $('body').append fb_root
+loadFacebookSDK = ->
+  console.log("load_sdk");
+  window.fbAsyncInit = initializeFacebookSDK
+  $.getScript("//connect.facebook.net/ja_JP/sdk.js")
 
-# loadFacebookSDK = ->
-#   window.fbAsyncInit = initializeFacebookSDK
-#   $.getScript("//connect.facebook.net/ja_JP/all.js#xfbml=1")
-
-# initializeFacebookSDK = ->
-#   FB.init
-#     appId     : YOUR_APP_ID
-#     channelUrl: '//WWW.YOUR_DOMAIN.COM/channel.html'
-#     status    : true
-#     cookie    : true
-#     xfbml     : true
+# TODO 設定
+initializeFacebookSDK = ->
+  FB.init
+    appId     : '238970959482402'
+    xfbml     : true
+    version   : 'v2.6'
 
 # ----------------------------------------- #
 # Twitter
@@ -56,8 +57,10 @@ $(document).on('page:load', ready)
 twttr_events_bound = false
 
 bindTwitterEventHandlers = ->
+  console.log("bindTwittereventHandlers")
   $(document).on 'page:load', renderTweetButtons
   twttr_events_bound = true
+  console.log("hello");
 
 renderTweetButtons = ->
   $('.twitter-share-button').each ->
@@ -70,33 +73,8 @@ loadTwitterSDK = ->
   $.getScript("//platform.twitter.com/widgets.js")
 
 # ----------------------------------------- #
-# Hatena
-# ----------------------------------------- #
-loadHatenaSDK = ->
-  $.getScript("//b.st-hatena.com/js/bookmark_button_wo_al.js")
-
-# ----------------------------------------- #
-# Google Analytics
-# ----------------------------------------- #
-$(document).on 'page:load page:restore', ->
-  if window.ga?
-    ga('set', 'location', location.href.split('#')[0])
-    ga('send', 'pageview')
-
-# ----------------------------------------- #
-# Google+
-# ----------------------------------------- #
-loadGoogleSDK = ->
-  $.getScript("https://apis.google.com/js/plusone.js")
-
-# ----------------------------------------- #
-# Hatena
-# ----------------------------------------- #
-loadHatenaSDK = ->
-  $.getScript("//b.st-hatena.com/js/bookmark_button_wo_al.js")
-
-# ----------------------------------------- #
 # Pocket
 # ----------------------------------------- #
+
 loadPocketSDK = ->
   $.getScript("https://widgets.getpocket.com/v1/j/btn.js?v=1")

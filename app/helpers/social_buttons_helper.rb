@@ -33,10 +33,7 @@ module SocialButtonsHelper
               :class => "twitter-share-button"
             }.merge(options)
 
-    html = ''
-    html << link_to("Tweet", 'https://twitter.com/share' , params)
-    html << '<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
-    html.html_safe
+    link_to("Tweet", 'https://twitter.com/share' , params)
   end
 
   #
@@ -56,5 +53,24 @@ module SocialButtonsHelper
         :"data-share"  => false
     }.merge(options).merge(:class => "fb-like")
     content_tag :div , '' , params
+  end
+
+  #
+  # LINEボタン
+  # https://media.line.me/howto/ja/
+  #
+
+  #
+  # poketボタン
+  #
+  def pocket_button options = {}
+    options.each{|k,v| options[k.to_sym] = v if k.is_a?String }
+    params = {
+      :"data-pocket-label" => 'pocket',
+      :"data-pocket-count" => 'none',
+      :"data-lang" => 'en',
+      :class => 'pocket-btn'
+    }.merge(options)
+    link_to '' , '' , params
   end
 end

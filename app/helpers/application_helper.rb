@@ -13,7 +13,7 @@ module ApplicationHelper
         type: :article ,
         url: root_url,
         # image: image_url(Settings.site.meta.ogp.image_path),
-        site_name: 'エロッシー Xvideosのオススメエロ動画を毎日あなたに' ,
+        site_name: 'sorepo' ,
         description: :description,
         locale: 'ja_JP'
       },
